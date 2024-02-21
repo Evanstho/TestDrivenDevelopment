@@ -12,6 +12,10 @@ class TestCase(unittest.TestCase):
         input = "asdASDads!"
         self.assertFalse(check_pwd(input))
 
+    def test_symbol(self):
+        input = "aaDDFG13f"
+        self.asserFalse(check_pwd(input))
+
 
 if __name__ == '__main__':
     unittest.main()

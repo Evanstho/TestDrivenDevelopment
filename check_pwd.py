@@ -2,6 +2,7 @@ def check_pwd(password):
     hasdigit = False
     hassymbol = False
     lower = False
+    upper = False
 
     if not password:
         return False
@@ -14,7 +15,9 @@ def check_pwd(password):
             hassymbol = True
         if char.islower():
             lower = True
-    if not hasdigit or not hassymbol or not lower:
+        if char.isupper():
+            upper = True
+    if not hasdigit or not hassymbol or not lower or not upper:
         return False
 
     return True

@@ -20,6 +20,9 @@ class TestCase(unittest.TestCase):
         input = "ASDSG123!@$"
         self.assertFalse(check_pwd(input))
 
-
+    def test_uppercase(self):
+        input = "asdfg!@#32132"
+        self.assertFalse(check_pwd(input))
+        
 if __name__ == '__main__':
     unittest.main()

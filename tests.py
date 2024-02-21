@@ -16,6 +16,10 @@ class TestCase(unittest.TestCase):
         input = "aaDDFG13f"
         self.assertFalse(check_pwd(input))
 
+    def test_lowercase(self):
+        input = "ASDSG123!@$"
+        self.assertFalse(check_pwd(input))
+
 
 if __name__ == '__main__':
     unittest.main()

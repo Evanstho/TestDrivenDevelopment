@@ -8,6 +8,10 @@ class TestCase(unittest.TestCase):
         input = ""
         self.assertFalse(check_pwd(input))
 
+    def test_nodigits(self):
+        input = "asdASDads!"
+        self.assertFalse(check_pwd(input))
+
 
 if __name__ == '__main__':
     unittest.main()

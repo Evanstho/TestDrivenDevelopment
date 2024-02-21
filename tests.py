@@ -23,6 +23,22 @@ class TestCase(unittest.TestCase):
     def test_uppercase(self):
         input = "asdfg!@#32132"
         self.assertFalse(check_pwd(input))
-        
+
+    def test_20_plus(self):
+        input = "123456789012345678902"
+        self.assertFalse(check_pwd(input))
+
+    def test_20(self):
+        input = "123456!@asDfa!@lkjgs"
+        self.assertTrue(check_pwd(input))
+
+    def test_8(self):
+        input = "asd12!@A"
+        self.assertTrue(check_pwd(input))
+    
+    def test_8_orless(self):
+        input = "1!aB"
+        self.assertFalse(check_pwd(input))
+
 if __name__ == '__main__':
     unittest.main()
